@@ -52,6 +52,8 @@ app.get("/", (req, res) => {
   res.send("LINE 翻譯機器人運作中！");
 });
 
-app.listen(3000, () => {
-  console.log("伺服器啟動中，監聽 port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`伺服器啟動中，監聽 port ${PORT}`);
 });
+
